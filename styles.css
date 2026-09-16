@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #1a252f;
+    color: #ffffff;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c3e50;
+    padding: 15px 25px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#stats-bar span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-left: 20px;
+    color: #2ecc71;
+}
+
+.game-container {
+    display: flex;
+    gap: 20px;
+}
+
+/* Tank Styling */
+.tank-section {
+    flex: 2;
+    background-color: #2c3e50;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.aquarium {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    /* Set the background image */
+    background-image: url('background.jpg');
+    /* Ensure the image covers the whole tank without stretching weirdly */
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    border: 4px solid #34495e;
+    border-radius: 8px;
+    margin: 15px 0;
+    overflow: hidden;
+}
+
+/* Dynamic Shrimp Placeholder Icons */
+.shrimp-icon {
+    position: absolute;
+    width: 50px; /* Control the size of your shrimp images here */
+    height: auto;
+    user-select: none;
+    transition: all 1s ease-in-out;
+    cursor: pointer;
+    /* Optional: adds a tiny drop shadow to separate them from the background */
+    filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.3)); 
+}
+
+.tank-controls {
+    display: flex;
+    gap: 10px;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.shop-panel, .upgrades-panel, .sell-panel {
+    background-color: #2c3e50;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+h2, h3 {
+    margin-bottom: 10px;
+}
+
+.shop-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: #34495e;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: #2ecc71;
+}
+
+button:disabled {
+    background-color: #7f8c8d;
+    cursor: not-allowed;
+}
+
+.sell-panel button {
+    width: 100%;
+    background-color: #e74c3c;
+}
+
+.sell-panel button:hover {
+    background-color: #c0392b;
+}
